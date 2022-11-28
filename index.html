@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script type="module" src="info.js" defer></script>
+    <script type="module" src="list.js"></script>
+    <!-- <script src="detail.js"></script> -->
   </head>
   <body>
     <header>
       <nav class="navbar">
         <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/">Lista</a></li>
+          <li>
+            <img class="logo_navbar" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="Logo Rick_and_Morty">
+          </li>
+          <li class="inicio">Inicio</li>
+          <li class="lista">Lista</li>
         </ul>
       </nav>
     </header>
+    <div class="home" id="home">
+    </div>
     <div class="container" id="container"></div>
     <footer>
       <div class="footer">
@@ -25,7 +34,6 @@
         </ul>
       </div>
     </footer>
-    <script src="list.js"></script>
-    <!-- <script src="detail.js"></script> -->
+
   </body>
 </html>

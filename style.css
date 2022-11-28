@@ -18,16 +18,33 @@ h3 {
     display: flex;
 }
 
+.logo_navbar {
+    max-height: 8vh;
+}
+
 ul {
     list-style-type: none;
     display: inline-flex;
-    gap: 5px;
+    gap: 15px;
+    align-items: center;
 }
 
 .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.home {
+    display: flex;
+    margin: 10%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10vw;
+}
+
+.logo img{
+    width: 80vw;
 }
 
 .character_container {
