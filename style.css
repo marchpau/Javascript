@@ -1,5 +1,6 @@
 *{
-    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -8,13 +9,41 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    font-size: 1.25rem;
+}
+
+.navbar {
+    margin: 25px auto;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    display: inline-flex;
+    gap: 5px;
+}
+
 .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+}
+
+.character_container {
+    margin: 20px auto;
+    flex-wrap: wrap;
+    width: 45vw;
 }
 
 .character_image {
-    width: 150px;
+    max-width: 90%;
+}
+
+.footer {
+    display: flex;
+    margin: 25px 0 auto;
+    min-height: 100px;
+    background-color: #f8f8f8;
+    align-items: center;
 }
