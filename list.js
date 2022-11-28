@@ -1,4 +1,5 @@
 import { getAllCharacters } from "/info.js";
+const showCharactersList = await getAllCharacters();
 
 function showHome() {
   const homeInfo = `
@@ -15,14 +16,14 @@ function showHome() {
       </div>
     `;
   document.getElementById("home").innerHTML = homeInfo;
-  document.querySelector(".container").style.display = "none";
+  document.querySelector(".list").style.display = "none";
 }
 
 showHome();
 
 const Home = document.querySelector(".inicio");
 Home.addEventListener("click", () => {
-  document.querySelector(".container").style.display = "none";
+  document.querySelector(".list").style.display = "none";
   document.querySelector(".home").style.display = "flex";
   function showAlert() {
     alert("Ya estamos aquí");
@@ -30,9 +31,27 @@ Home.addEventListener("click", () => {
   setTimeout(showAlert, 1000);
 });
 
-const List = document.querySelector(".lista");
-List.addEventListener("click", () => {
-  document.querySelector(".home").style.display = "none";
-  document.querySelector(".container").style.display = "flex";
-  getAllCharacters();
-});
+function showList () {
+  const List = document.querySelector(".lista");
+  List.addEventListener("click", () => {
+    document.querySelector(".home").style.display = "none";
+    document.querySelector(".list").style.display = "flex";
+  });
+  
+  let characterList = "";
+  showCharactersList.forEach((character) => {
+    characterList += `
+                          <div class="character_container">
+                              <img class="character_image" src="${character.image}">
+                              <h3 id="${character.id}" class="character_name">${character.name}</h3>
+                          </div>
+                      `;
+  });
+  document.getElementById("list").innerHTML = characterList;
+}
+
+showList()
+
+export { showList }
+
+
