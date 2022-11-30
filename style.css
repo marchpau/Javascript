@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.home, .characters, .detail {
+    margin: 10%;
+}
+
 h1 {
     text-align: center;
 }
@@ -22,6 +26,10 @@ h3 {
     max-height: 8vh;
 }
 
+.characters_navbar {
+    display: flex;
+}
+
 ul {
     list-style-type: none;
     display: inline-flex;
@@ -29,23 +37,32 @@ ul {
     align-items: center;
 }
 
-.list {
+.characters {
     display: flex;
+    gap: 3vw;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+.characters-disabled {
+    display: none;
+}
+
 .home {
     display: flex;
-    margin: 10%;
+
     flex-direction: column;
     justify-content: center;
-    gap: 10vw;
+    gap: 5vw;
+}
+
+.home-disabled {
+    display: none;
 }
 
 .detail {
     display: flex;
-    margin: 10%;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;

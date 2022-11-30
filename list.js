@@ -17,6 +17,7 @@ function showHome() {
     `;
   document.getElementById("home").innerHTML = homeInfo;
   document.querySelector(".list").style.display = "none";
+  document.querySelector(".detail").style.display = "none";
 }
 
 showHome();
@@ -24,6 +25,7 @@ showHome();
 const Home = document.querySelector(".inicio");
 Home.addEventListener("click", () => {
   document.querySelector(".list").style.display = "none";
+  document.querySelector(".detail").style.display = "none";
   document.querySelector(".home").style.display = "flex";
   function showAlert() {
     alert("Ya estamos aquí");
@@ -35,6 +37,7 @@ function showList() {
   const List = document.querySelector(".lista");
   List.addEventListener("click", () => {
     document.querySelector(".home").style.display = "none";
+    document.querySelector(".detail").style.display = "none";
     document.querySelector(".list").style.display = "flex";
   });
 
@@ -47,8 +50,25 @@ function showList() {
                           </div>
                       `;
 
+                      const characterDiv = document.getElementsByClassName("character_container")
+                      for (const iterator of characterDiv) {
+                        iterator.addEventListener("click", () => 
+                        showDetail(character));
+                      }
+                      
   });
-  document.getElementById("list").innerHTML = characterCard;
-}
+  // document.getElementById("list").innerHTML = characterCard;
+  // const characterDiv = document.getElementsByClassName("character_container")
+  // for (const iterator of characterDiv) {
+  //   iterator.addEventListener("click", () => 
+  //   showDetail(iterator));
+  // }
+  }
+
 
 showList();
+function showDetail(e){
+  console.log(e)
+  let characterDetail = ""
+  characterDetail += e;
+}
